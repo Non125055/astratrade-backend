@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pydantic
+numpy
+pandas
+yfinance
+ta
+torch
+scikit-learn
+python-binance
+requests
