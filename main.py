@@ -94,6 +94,12 @@ def auto_buy_route(req: AutoTradeRequest):
 def auto_sell_route(req: AutoTradeRequest):
     return auto_sell(req.api_key, req.api_secret, req.symbol, req.quantity)
 
+@app.get("/debug_model")
+def debug_model():
+    import torch
+    state = torch.load("model.pth", map_location="cpu")
+    return {k: list(v.shape) for k,v in state.items()}
+
 
 # -----------------------------------------------------------
 # HOME
@@ -104,3 +110,4 @@ def home():
         "status": "running",
         "message": "AstraTrade AI Backend Active"
     }
+
