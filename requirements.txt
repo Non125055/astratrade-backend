@@ -1,15 +1,15 @@
-fastapi
-uvicorn
-pydantic
-numpy
+numpy==1.26.4
 pandas
 yfinance
 ta
-scikit-learn
-python-binance
-requests
-
 torch==2.0.1+cpu
 torchvision==0.15.2+cpu
 torchaudio==2.0.2+cpu
 --extra-index-url https://download.pytorch.org/whl/cpu
+
+fastapi
+uvicorn
+pydantic
+scikit-learn
+requests
+python-binance
