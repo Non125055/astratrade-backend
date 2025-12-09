@@ -27,9 +27,9 @@ class TransformerAI(nn.Module):
 # -------------------------------
 # LOAD TRAINED MODEL
 # -------------------------------
-model = TransformerAI()
-model.load_state_dict(torch.load("model.pth", map_location=torch.device("cpu")))
-model.eval()
+model = None
+print("MODEL LOADING DISABLED FOR DEBUG")
+
 
 
 # -------------------------------
@@ -44,3 +44,4 @@ def predict_next_price(window_data):
     with torch.no_grad():
         pred = model(x).item()
     return float(pred)
+
